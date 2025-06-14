@@ -1,0 +1,13 @@
+<h1>レシピ一覧</h1>
+
+<p><%= link_to "新しいレシピを投稿する", new_recipe_path, style: "display: inline-block; padding: 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;" %></p>
+
+<% @recipes.each do |recipe| %>
+  <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+    <h2><%= recipe.name %></h2>
+    <p><strong>材料:</strong> <%= recipe.ingredients %></p>
+    <p><strong>作り方:</strong> <%= recipe.instructions %></p>
+    <%= link_to "編集する", edit_recipe_path(recipe) %>
+    <%= link_to "削除する", recipe_path(recipe), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %>
+  </div>
+<% end %>

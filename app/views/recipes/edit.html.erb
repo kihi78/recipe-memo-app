@@ -1,0 +1,22 @@
+<h1>レシピを編集</h1>
+
+<%= form_with model: @recipe do |form| %>
+  <div style="margin-bottom: 10px;">
+    <%= form.label :name, "料理名" %><br>
+    <%= form.text_field :name, style: "width: 100%;" %>
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <%= form.label :ingredients, "材料" %><br>
+    <%= form.text_area :ingredients, rows: 5, style: "width: 100%;" %>
+  </div>
+
+  <div style="margin-bottom: 10px;">
+    <%= form.label :instructions, "作り方" %><br>
+    <%= form.text_area :instructions, rows: 10, style: "width: 100%;" %>
+  </div>
+
+  <div>
+    <%= form.submit "更新する" %>
+  </div>
+<% end %>
