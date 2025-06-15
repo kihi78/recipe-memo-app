@@ -31,7 +31,7 @@ Ruby on Railsの学習の一環として作成したWebアプリケーション�
 
 1.  **リポジトリをクローン**
     ```bash
-    git clone [https://github.com/kihi78/recipe-memo-app.git](https://github.com/kihi78/recipe-memo-app.git)
+    git clone https://github.com/kihi78/recipe-memo-app.git
     ```
 
 2.  **プロジェクトディレクトリに移動**
