@@ -4,7 +4,7 @@
 
 <% @recipes.each do |recipe| %>
   <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
-    <h2><%= recipe.name %></h2>
+    <h2><%= link_to recipe.name, recipe_path(recipe) %></h2>
     <p><strong>材料:</strong> <%= recipe.ingredients %></p>
     <p><strong>作り方:</strong> <%= recipe.instructions %></p>
     <%= link_to "編集する", edit_recipe_path(recipe) %>

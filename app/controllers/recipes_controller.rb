@@ -42,6 +42,11 @@ class RecipesController < ApplicationController
 
     redirect_to root_path, notice: "レシピが削除されました。", status: :see_other
   end
+
+  def show
+    # URLの:idを使って、データベースから表示したいレシピを1件見つけてくる
+    @recipe = Recipe.find(params[:id])
+  end
   
   private
     # Strong Parameters: 不正なデータを受け付けないように、許可するパラメータを定義

@@ -1,0 +1,15 @@
+<% @page_title = @recipe.name %>
+
+<h1><%= @recipe.name %></h1>
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+  <h3>材料</h3>
+  <p><%= @recipe.ingredients %></p>
+
+  <h3>作り方</h3>
+  <p><%= @recipe.instructions %></p>
+</div>
+
+<hr>
+
+<%= link_to "レシピ一覧に戻る", root_path %>
